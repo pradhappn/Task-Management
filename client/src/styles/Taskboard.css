@@ -1,0 +1,18 @@
+.task-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+}
+
+@media (max-width: 991px) {
+  .task-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .task-board {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

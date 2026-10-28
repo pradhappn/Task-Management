@@ -1,0 +1,81 @@
+.task-column {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid var(--border-color);
+  border-radius: 13px;
+  background: #f0f1f7;
+}
+
+.task-column-header {
+  padding: 7px 4px 15px;
+}
+
+.task-column-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.task-count {
+  display: inline-grid;
+  min-width: 23px;
+  height: 23px;
+  padding: 0 5px;
+  place-items: center;
+  border-radius: 7px;
+  background: #e4e6ef;
+  color: #6c7288;
+  font-size: 11px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot-todo {
+  background: #8b91a7;
+}
+
+.dot-in_progress {
+  background: #e2a13b;
+}
+
+.dot-done {
+  background: #2da56a;
+}
+
+.task-column-list {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 160px;
+}
+
+.task-empty-state {
+  display: grid;
+  min-height: 145px;
+  align-content: center;
+  justify-items: center;
+  border: 1px dashed #d8dbe7;
+  border-radius: 10px;
+  color: var(--text-muted);
+}
+
+.task-empty-state i {
+  margin-bottom: 8px;
+  font-size: 23px;
+}
+
+.task-empty-state p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.task-column-list-drag-over {
+  background: rgb(113 99 216 / 6%);
+  border-radius: 10px;
+  outline: 1px dashed rgb(113 99 216 / 35%);
+  outline-offset: -2px;
+}

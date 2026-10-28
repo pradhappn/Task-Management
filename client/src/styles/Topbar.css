@@ -1,0 +1,65 @@
+.app-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 86px;
+  padding: 18px 30px;
+  background: white;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.topbar-eyebrow {
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.topbar-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.topbar-date {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.profile-avatar {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: #f0eeff;
+  color: var(--brand);
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .app-topbar {
+    min-height: 70px;
+    padding: 14px 16px;
+  }
+
+  .topbar-title {
+    font-size: 19px;
+  }
+
+  .topbar-date {
+    display: none;
+  }
+
+  .topbar-actions {
+    gap: 8px;
+  }
+}

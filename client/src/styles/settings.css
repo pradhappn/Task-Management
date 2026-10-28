@@ -1,0 +1,139 @@
+.settings-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 26px;
+}
+
+.settings-page > h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.settings-page > p {
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.settings-row h3 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.settings-row p {
+  font-size: 12px;
+}
+
+.settings-status {
+  flex: 0 0 auto;
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: #f0eeff;
+  color: var(--brand);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.settings-git-row {
+  margin-top: 8px;
+}
+
+.settings-git-heading {
+  max-width: 600px;
+}
+
+.settings-feedback {
+  margin: 0 0 14px;
+  font-size: 13px;
+}
+
+.settings-error {
+  color: #b42318;
+}
+
+.settings-success {
+  color: #18794e;
+}
+
+.settings-remote-current {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.settings-remote-name {
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.settings-remote-url {
+  min-width: 0;
+  flex: 1 1 260px;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+
+.settings-remote-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.settings-remote-form label {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.settings-remote-form input {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+}
+
+.settings-remote-form input:focus {
+  border-color: var(--brand);
+  outline: 2px solid color-mix(in srgb, var(--brand) 20%, transparent);
+}
+
+.settings-url-hint {
+  margin: 0;
+  font-size: 11px;
+}
+
+.settings-remote-submit {
+  justify-self: start;
+  margin-top: 6px;
+}
+
+@media (max-width: 575px) {
+  .settings-page {
+    padding: 18px;
+  }
+
+  .settings-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

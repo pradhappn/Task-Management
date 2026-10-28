@@ -1,0 +1,33 @@
+.simple-page {
+  display: grid;
+  min-height: 50vh;
+  align-content: center;
+  justify-items: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.simple-page-icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+  place-items: center;
+  border-radius: 15px;
+  background: #f0eeff;
+  color: var(--brand);
+  font-size: 26px;
+}
+
+.simple-page h2 {
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.simple-page p {
+  margin-bottom: 20px;
+}
+
+.simple-page .btn {
+  font-size: 12px;
+}

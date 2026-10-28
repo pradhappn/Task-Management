@@ -1,0 +1,129 @@
+.task-card {
+  padding: 15px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 11px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  border-color: #d5d0fb;
+  box-shadow: 0 5px 15px rgb(32 36 58 / 5%);
+}
+
+.task-card-title {
+  margin: 2px 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.task-card-description {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.task-menu-button {
+  padding: 0 3px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.task-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  margin-top: 8px;
+}
+
+.priority-badge {
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.priority-low {
+  background: #e8f7ee;
+  color: #21864e;
+}
+
+.priority-medium {
+  background: #fff1dc;
+  color: #a96a10;
+}
+
+.priority-high {
+  background: #ffebeb;
+  color: #c13d47;
+}
+
+.task-due-date {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.task-card-title-button {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.task-card-title-button .task-card-title {
+  margin-bottom: 12px;
+}
+
+.task-card-title-button:hover .task-card-title {
+  color: #7163d8;
+}
+
+.task-card-drag-wrapper {
+  width: 100%;
+}
+
+.task-card-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.task-drag-handle {
+  display: grid;
+  place-items: center;
+  padding: 2px 4px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: grab;
+  touch-action: none;
+}
+
+.task-drag-handle:hover {
+  background: #f0efff;
+  color: #7163d8;
+}
+
+.task-drag-handle:active {
+  cursor: grabbing;
+}
+
+.task-card-drag-wrapper.is-dragging .task-card {
+  border-color: #a79bf5;
+  box-shadow: 0 12px 30px rgb(32 36 58 / 15%);
+  transform: rotate(1deg);
+}
