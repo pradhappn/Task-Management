@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import MyTasks from "./pages/Mytasks";
-import Settings from "./pages/Settings";
+import Settings from "./pages/settings";
 
 function PublicOnly({ children }) {
   const { user, loading } = useAuth();
