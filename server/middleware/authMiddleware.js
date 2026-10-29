@@ -5,7 +5,11 @@ const User = require("../models/User");
 
 async function protect(req, res, next) {
   try {
-    const token = req.cookies?.taskflow_token;
+    const authorization = req.get("Authorization");
+    const bearerToken = authorization?.startsWith("Bearer ")
+      ? authorization.slice(7)
+      : null;
+    const token = bearerToken || req.cookies?.taskflow_token;
 
     if (!token) {
       return res.status(401).json({

@@ -1,13 +1,17 @@
 
+import { getAuthToken, setAuthToken } from "./api";
+
 const API_URL =
   import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 async function request(path, options = {}) {
+  const token = getAuthToken();
   const response = await fetch(`${API_URL}${path}`, {
     ...options,
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...options.headers,
     },
   });
@@ -23,17 +27,21 @@ async function request(path, options = {}) {
 
 const authService = {
   async register(formData) {
-    return request("/api/auth/register", {
+    const result = await request("/api/auth/register", {
       method: "POST",
       body: JSON.stringify(formData),
     });
+    setAuthToken(result.token);
+    return result;
   },
 
   async login(credentials) {
-    return request("/api/auth/login", {
+    const result = await request("/api/auth/login", {
       method: "POST",
       body: JSON.stringify(credentials),
     });
+    setAuthToken(result.token);
+    return result;
   },
 
   async getMe() {
@@ -41,9 +49,13 @@ const authService = {
   },
 
   async logout() {
-    return request("/api/auth/logout", {
-      method: "POST",
-    });
+    try {
+      return await request("/api/auth/logout", {
+        method: "POST",
+      });
+    } finally {
+      setAuthToken(null);
+    }
   },
 };
 

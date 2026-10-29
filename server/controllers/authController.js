@@ -15,7 +15,7 @@ function setAuthCookie(res, token) {
   res.cookie("taskflow_token", token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     maxAge: 24 * 60 * 60 * 1000,
     path: "/",
   });
@@ -167,7 +167,7 @@ function logout(req, res) {
   res.clearCookie("taskflow_token", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     path: "/",
   });
 

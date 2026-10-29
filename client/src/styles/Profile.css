@@ -1,0 +1,257 @@
+.profile-page {
+  display: grid;
+  gap: 18px;
+}
+
+.profile-heading h2 {
+  margin: 0 0 5px;
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.profile-heading p,
+.profile-section-heading p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.profile-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.profile-account-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-avatar {
+  display: grid;
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border-radius: 18px;
+  background: #f0eeff;
+  color: var(--brand);
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.profile-account-content {
+  min-width: 0;
+}
+
+.profile-account-content h3,
+.profile-section-heading h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.profile-email {
+  margin: 0 0 9px;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.profile-account-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #16834a;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.profile-task-count {
+  display: grid;
+  gap: 2px;
+  text-align: right;
+}
+
+.profile-task-summary {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: auto;
+}
+
+.profile-finished-count strong,
+.profile-finished-count span {
+  color: #16834a;
+}
+
+.profile-unfinished-count strong,
+.profile-unfinished-count span {
+  color: #b26a00;
+}
+
+.profile-task-count strong {
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+.profile-task-count span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.profile-logout-button {
+  flex: 0 0 auto;
+}
+
+.profile-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+
+.profile-section-heading p {
+  font-size: 12px;
+}
+
+.profile-section-count {
+  display: grid;
+  flex: 0 0 auto;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 9px;
+  place-items: center;
+  border-radius: 10px;
+  background: #f0eeff;
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.profile-task-list {
+  display: grid;
+}
+
+.profile-task {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.profile-task-main {
+  min-width: 0;
+}
+
+.profile-task-main h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.profile-task-main p {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.profile-task-meta {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-task-status {
+  color: #6c7285;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.profile-task-status.status-in_progress {
+  color: #b26a00;
+}
+
+.profile-task-status.status-done {
+  color: #16834a;
+}
+
+.profile-task-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.profile-empty-state {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 32px 12px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.profile-empty-state > i {
+  color: var(--brand);
+  font-size: 26px;
+}
+
+.profile-empty-state p {
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .profile-card {
+    padding: 17px;
+  }
+
+  .profile-account-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .profile-account-content {
+    flex: 1 1 calc(100% - 80px);
+  }
+
+  .profile-task-summary {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+
+  .profile-task-count {
+    text-align: left;
+  }
+
+  .profile-logout-button {
+    width: 100%;
+  }
+
+  .profile-section-heading {
+    align-items: flex-start;
+  }
+
+  .profile-task {
+    flex-direction: column;
+  }
+
+  .profile-task-meta {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

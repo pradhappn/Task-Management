@@ -4,6 +4,7 @@ import "../styles/sidebar.css";
 const navigationItems = [
   { label: "Dashboard", path: "/", icon: "bi-grid-1x2" },
   { label: "My Tasks", path: "/tasks", icon: "bi-check2-square" },
+  { label: "Profile", path: "/profile", icon: "bi-person-circle" },
   { label: "Settings", path: "/settings", icon: "bi-gear" },
 ];
 

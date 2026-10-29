@@ -1,13 +1,17 @@
 
+import { getAuthToken } from "./api";
+
 const API_BASE_URL =
   import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 async function request(path, options = {}) {
+  const token = getAuthToken();
   const response = await fetch(`${API_BASE_URL}${path}`, {
     ...options,
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...options.headers,
     },
   });

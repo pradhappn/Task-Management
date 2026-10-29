@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import MyTasks from "./pages/Mytasks";
+import Profile from "./pages/Profile";
 import Settings from "./pages/settings";
 
 function PublicOnly({ children }) {
@@ -45,6 +46,7 @@ function AppRoutes() {
         <Route element={<AppLayout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/tasks" element={<MyTasks />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
       </Route>

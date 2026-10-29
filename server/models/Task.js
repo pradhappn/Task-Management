@@ -10,10 +10,16 @@ const taskSchema = new mongoose.Schema({
 
         },
 
+        description: {
+            type: String,
+            trim: true,
+            maxlength: [2000, "Description cannot exceed 2000 characters"],
+            default: "",
+        },
         descreption: {
             type: String,
             trim: true,
-            maxlength: [2000, "Descreption cannot exceed 2000 characters"],
+            maxlength: [2000, "Description cannot exceed 2000 characters"],
             default: "",
         },
 
@@ -45,8 +51,8 @@ const taskSchema = new mongoose.Schema({
 },
     },
     {
-        timestamp: true,
-        versionkey: false,
+        timestamps: true,
+        versionKey: false,
     }
 );
 
