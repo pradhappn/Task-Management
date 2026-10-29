@@ -1,7 +1,7 @@
 .settings-page {
-  max-width: 850px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 26px;
+  padding: 22px;
 }
 
 .settings-page > h2 {
@@ -19,8 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 20px 0;
+  gap: 14px;
+  padding: 16px 0;
   border-top: 1px solid var(--border-color);
 }
 
@@ -129,11 +129,19 @@
 
 @media (max-width: 575px) {
   .settings-page {
-    padding: 18px;
+    padding: 16px;
   }
 
   .settings-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .settings-remote-current {
+    align-items: flex-start;
+  }
+
+  .settings-remote-current .btn {
+    width: 100%;
   }
 }

@@ -57,7 +57,7 @@ function TaskBoard({
         </div>
       </DragDropContext>
 
-      <div className="d-flex align-items-center justify-content-between gap-3 mt-4">
+      <div className="task-board-pagination d-flex align-items-center justify-content-between gap-3 mt-3">
         <span className="text-secondary small">
           {pagination?.totalTasks ?? 0} tasks · Page {page} of {totalPages}
         </span>

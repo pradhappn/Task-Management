@@ -11,9 +11,24 @@ const settingsRoutes = require("./routes/settingsRoutes");
 
 const app = express();
 
-app.use(cors({origin: process.env.CLIENT_URI,
-        credentials: true,
+const allowedOrigins = new Set([
+    "http://localhost:5173",
+    "https://task-management-1-d55h.onrender.com",
+    ...(process.env.CLIENT_URI || "")
+        .split(",")
+        .map((origin) => origin.trim().replace(/\/+$/, ""))
+        .filter(Boolean),
+]);
 
+app.use(cors({
+    origin(origin, callback) {
+        if (!origin || allowedOrigins.has(origin)) {
+            return callback(null, true);
+        }
+
+        return callback(new Error(`Origin ${origin} is not allowed by CORS`));
+    },
+    credentials: true,
 }));
 
 app.use(express.json());

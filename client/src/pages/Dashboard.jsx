@@ -319,14 +319,9 @@ useEffect(() => {
         </div>
       )}
 
-      <section
-        className="row g-3 mb-4"
-        aria-label="Task statistics"
-      >
+      <section className="dashboard-stats" aria-label="Task statistics">
         {statCards.map((stat) => (
-          <div className="col-6 col-xl-3" key={stat.title}>
-            <StatCard {...stat} />
-          </div>
+          <StatCard {...stat} key={stat.title} />
         ))}
       </section>
 

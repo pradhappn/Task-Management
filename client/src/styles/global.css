@@ -50,11 +50,12 @@ a {
 
 .app-main {
   min-width: 0;
-  margin-left: 250px;
+  margin-left: 232px;
 }
 
-.page-content {
-  padding: 30px;
+.app-content {
+  min-width: 0;
+  padding: 24px;
 }
 
 .btn-brand {
@@ -72,7 +73,7 @@ a {
 .surface-card {
   background: var(--surface);
   border: 1px solid var(--border-color);
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 .muted-text {
@@ -84,7 +85,13 @@ a {
     margin-left: 0;
   }
 
-  .page-content {
-    padding: 18px 14px;
+  .app-content {
+    padding: 18px 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app-content {
+    padding: 14px 12px;
   }
 }

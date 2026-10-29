@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 86px;
-  padding: 18px 30px;
+  min-height: 72px;
+  padding: 14px 24px;
   background: white;
   border-bottom: 1px solid var(--border-color);
 }
@@ -18,14 +18,26 @@
 
 .topbar-title {
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 750;
 }
 
 .topbar-actions {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
+}
+
+.topbar-actions > .d-flex {
+  min-width: 0;
+  gap: 10px !important;
+}
+
+.topbar-actions > .d-flex > span {
+  overflow: hidden;
+  max-width: 180px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .topbar-date {
@@ -47,8 +59,8 @@
 
 @media (max-width: 767px) {
   .app-topbar {
-    min-height: 70px;
-    padding: 14px 16px;
+    min-height: 62px;
+    padding: 11px 16px;
   }
 
   .topbar-title {
@@ -61,5 +73,33 @@
 
   .topbar-actions {
     gap: 8px;
+  }
+
+  .topbar-actions > .d-flex > span {
+    max-width: 100px;
+    font-size: 12px;
+  }
+
+  .topbar-actions .btn {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app-topbar {
+    padding-inline: 12px;
+  }
+
+  .topbar-eyebrow {
+    font-size: 9px;
+  }
+
+  .topbar-title {
+    font-size: 17px;
+  }
+
+  .topbar-actions > .d-flex > span {
+    max-width: 70px;
   }
 }

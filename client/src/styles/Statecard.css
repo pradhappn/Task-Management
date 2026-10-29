@@ -1,16 +1,17 @@
 .stat-card {
   height: 100%;
-  padding: 21px;
+  min-width: 0;
+  padding: 15px;
 }
 
 .stat-icon {
   display: grid;
-  width: 43px;
-  height: 43px;
-  margin-bottom: 17px;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
   place-items: center;
-  border-radius: 12px;
-  font-size: 21px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 .stat-icon-purple {
@@ -34,14 +35,14 @@
 }
 
 .stat-title {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--text-muted);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .stat-value {
-  margin-bottom: 5px;
-  font-size: 28px;
+  margin-bottom: 3px;
+  font-size: clamp(21px, 2vw, 25px);
   font-weight: 750;
   line-height: 1.2;
 }
@@ -49,5 +50,19 @@
 .stat-description {
   margin: 0;
   color: var(--text-muted);
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+@media (max-width: 575px) {
+  .stat-card {
+    padding: 12px;
+  }
+
+  .stat-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 9px;
+    font-size: 16px;
+  }
 }

@@ -1,5 +1,5 @@
 .task-card {
-  padding: 15px;
+  padding: 12px;
   background: white;
   border: 1px solid var(--border-color);
   border-radius: 11px;
@@ -12,18 +12,18 @@
 }
 
 .task-card-title {
-  margin: 2px 0 12px;
+  margin: 2px 0 9px;
   font-size: 13px;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.45;
   overflow-wrap: anywhere;
 }
 
 .task-card-description {
-  margin: 0 0 12px;
+  margin: 0 0 9px;
   color: var(--text-muted);
   font-size: 12px;
-  line-height: 1.6;
+  line-height: 1.5;
   overflow-wrap: anywhere;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .task-card-title-button .task-card-title {
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 }
 
 .task-card-title-button:hover .task-card-title {
